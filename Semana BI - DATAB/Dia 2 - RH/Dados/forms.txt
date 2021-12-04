@@ -1,0 +1,41 @@
+*medidas
+
+admissões = COUNTROWS(RH)
+
+Desligamentos = 
+calculate(
+	[Admissões],
+	RH(Desligado] = "sim",
+	USERELATIONSHIP(Calendario[data], RH[Data.Desligamento])
+)
+
+
+HC = [Admissoes] - desligamentos
+
+admissões acc = 
+calculate(
+[admissões],
+datesbetween(calendario[data]. blank(), max(calendario[data]))
+
+folha salarial=
+calculate(
+sum(RH[desligado]= "Não"
+)
+
+Desligamentos acc = 
+calculate(
+[admissões],
+datesbetween(calendario[data]. blank(), max(calendario[data]))
+Salário médio = AVERAGE(RH[salário])
+
+*tabela
+Calendario = CALENDARAUTO()
+
+cria relação de n - 1 entre rh e calendario
+
+filtro
+estilo
+orientação - horizontal
+
+samedep
+drilltrough - colaboradores
